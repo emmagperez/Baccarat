@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baccarat.controller.ScoreController">
+   <children>
+      <Pane layoutX="118.0" layoutY="22.0" prefHeight="122.0" prefWidth="789.0">
+         <children>
+            <Label layoutX="61.0" layoutY="36.0" text="Enter an ID to save highscore" textFill="#bf1111">
+               <font>
+                  <Font name="Gulim" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="userName" layoutX="433.0" layoutY="277.0" prefHeight="37.0" prefWidth="163.0" />
+      <Label layoutX="396.0" layoutY="230.0" prefHeight="37.0" prefWidth="274.0" text="Please enter a user ID 3 characters long">
+         <font>
+            <Font name="Gulim" size="14.0" />
+         </font></Label>
+      <Label layoutX="315.0" layoutY="167.0" text="Number of Wins:">
+         <font>
+            <Font name="Gulim" size="36.0" />
+         </font></Label>
+      <Label fx:id="score" layoutX="634.0" layoutY="167.0" prefHeight="17.0" prefWidth="14.0">
+         <font>
+            <Font name="Gulim" size="36.0" />
+         </font></Label>
+      <Button fx:id="logStats" layoutX="459.0" layoutY="341.0" mnemonicParsing="false" onAction="#goSubmit" prefHeight="37.0" prefWidth="112.0" text="Submit" />
+      <Button fx:id="quit" layoutX="880.0" layoutY="535.0" mnemonicParsing="false" onAction="#goQuit" prefHeight="37.0" prefWidth="103.0" text="Quit" />
+   </children>
+</AnchorPane>

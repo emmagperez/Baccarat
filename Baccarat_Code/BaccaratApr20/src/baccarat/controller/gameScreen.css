@@ -1,0 +1,168 @@
+.background {
+    -fx-background-image: url("tableBackground.png");
+}
+
+#balance, #betLayout {
+	-fx-background-color: black;
+	-fx-border-color: gold;
+	-fx-border-width: 1px;
+	-fx-font-family: "Helvetica";
+	-fx-font-size: 16px;
+	-fx-font-weight: bold;
+	-fx-text-fill: gold;
+}
+
+#betLabel {
+	-fx-font-family: "Helvetica";
+	-fx-font-size: 16px;
+	-fx-font-weight: bold;
+	-fx-text-fill: gold;
+}
+
+#pScore, #bScore {
+	-fx-background-color: black;
+	-fx-border-color: gold;
+	-fx-border-width: 1px;
+	-fx-font-family: "Helvetica";
+	-fx-font-size: 16px;
+	-fx-font-weight: bold;
+	-fx-text-fill: gold;
+	-fx-alignment: center;
+}
+ 
+#closeButton {
+	-fx-text-fill:white;
+    -fx-padding: 5 10 5 10;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-background-color:
+	    linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+	    linear-gradient(#020b02, #3a3a3a),
+	    linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+	    linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+	    linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+    -fx-background-insets: 0,1,4,5,6;
+    -fx-background-radius: 9,8,5,4,3;
+}
+
+#closeButton:hover {
+	-fx-background-color:
+		linear-gradient(#777777 100%, #606060 51%, #505250 50%, #2a2b2a 0%),
+		linear-gradient(#8a8a8a 100%, #6b6a6b 80%, #343534 20%, #262626 0%),
+		linear-gradient(#9d9e9d 100%, #6b6a6b 80%, #343534 20%, #242424 0%),
+		linear-gradient(#3a3a3a, #020b02),
+		linear-gradient(#686868 100%, #232723 75%, #373837 25%, #757575 0%);
+	-fx-background-insets: 0,1,4,5,6;
+    -fx-background-radius: 9,8,5,4,3;
+}
+
+#playerCard1,
+#playerCard2,
+#playerCard3,
+#bankerCard1,
+#bankerCard2,
+#bankerCard3 {
+	-fx-background-image: url("cardBack.jpg");
+	-fx-background-size: 100px 150px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-shadow-highlight-color: transparent;  
+	-fx-outer-border: transparent;  
+	-fx-inner-border : transparent; 
+	-fx-focus-color: transparent;  
+	-fx-faint-focus-color : transparent;  
+	-fx-body-color: white;
+	-fx-font-size: 1px;
+}
+
+.spinner {
+	-fx-border-color: gold;
+	-fx-border-width: 1px;
+	-fx-background-color: black;
+}
+
+.spinner .text-field {
+	-fx-background-color: black;
+	-fx-text-fill: gold;
+	-fx-font-family: "Helvetica";
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+	-fx-border-color: black;
+	-fx-padding: 1px;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    /* interpolate color between yellow and red based on first color brightness */
+    -fx-body-color: ladder(#444, grey 0%, darkgrey 100%);
+}
+
+.spinner .increment-arrow-button:hover:pressed,
+.spinner .decrement-arrow-button:hover:pressed,
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    /* interpolate color between yellow and red based on first color brightness */
+    -fx-body-color: ladder(#AAA, grey 0%, darkgrey 100%);
+}
+
+.radio-button {
+-fx-font-family: "Helvetica";
+-fx-font-size: 11;
+/*    -fx-text-fill: rgb(255, 255, 255, 0.4);*/
+-fx-text-fill: lightgoldenrodyellow;
+/*    -fx-effect: dropshadow(one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );*/
+
+}
+
+#newGameButton {
+	-fx-text-fill:white;
+    -fx-padding: 15 30 15 30;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-background-color:
+	    linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+	    linear-gradient(#020b02, #3a3a3a),
+	    linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+	    linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+	    linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+    -fx-background-insets: 0,1,4,5,6;
+    -fx-background-radius: 9,8,5,4,3;
+}
+
+#newGameButton:hover {
+	-fx-background-color:
+		linear-gradient(#777777 100%, #606060 51%, #505250 50%, #2a2b2a 0%),
+		linear-gradient(#8a8a8a 100%, #6b6a6b 80%, #343534 20%, #262626 0%),
+		linear-gradient(#9d9e9d 100%, #6b6a6b 80%, #343534 20%, #242424 0%),
+		linear-gradient(#3a3a3a, #020b02),
+		linear-gradient(#686868 100%, #232723 75%, #373837 25%, #757575 0%);
+	-fx-background-insets: 0,1,4,5,6;
+    -fx-background-radius: 9,8,5,4,3;
+}
+
+#winMessage { 
+	-fx-background-image: url("darkBackground.jpg"), url("playerWins.png"); 
+	-fx-background-size: 150px 75px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+
+}
+
+#lossMessage { 
+	-fx-background-image: url("darkBackground.jpg"), url("bankerWins.png"); 
+	-fx-background-size: 150px 75px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#tieMessage { 
+	-fx-background-image: url("darkBackground.jpg"), url("tieGame.png"); 
+	-fx-background-size: 150px 75px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}

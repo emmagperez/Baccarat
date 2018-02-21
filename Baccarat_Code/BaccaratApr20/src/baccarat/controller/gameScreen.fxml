@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baccarat.controller.GameScreenController">
+   <children>
+	   <ImageView fitHeight="600.0" fitWidth="1024.0">
+	      <image>
+	        <Image url="@tableBackground.png" />
+	      </image>
+	    </ImageView>
+	    <Button fx:id="playerCard1" layoutX="77.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#playerCard1Action" prefHeight="150.0" prefWidth="100.0" />
+	    <Button fx:id="playerCard2" layoutX="197.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="100.0" visible="false" />
+	    <Button fx:id="playerCard3" layoutX="317.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="100.0" visible="false" />
+	    <Button fx:id="bankerCard1" disable="true" layoutX="590.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="100.0" />
+	    <Button fx:id="bankerCard2" layoutX="710.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="100.0" visible="false" />
+	    <Button fx:id="bankerCard3" layoutX="830.0" layoutY="59.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="100.0" visible="false" />
+	    <Label fx:id="bScore" layoutX="810.0" layoutY="227.0" mnemonicParsing="false" prefHeight="20" prefWidth="30" />
+	    <Label fx:id="pScore" layoutX="165.0" layoutY="227.0" mnemonicParsing="false" prefHeight="20" prefWidth="30" />
+	    <Button fx:id="closeButton" layoutX="910.0" layoutY="559.0" mnemonicParsing="false" onMouseClicked="#closeButtonAction" prefHeight="27.0" prefWidth="100.0" text="Quit" />
+  	    <Button fx:id="newGameButton" layoutX="910.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#newGameButtonAction" prefHeight="27.0" prefWidth="100.0" text="Replay" visible="false" />  
+  	    <Label fx:id="winMessage" layoutX="379" layoutY="97" mnemonicParsing="false" prefHeight="75" prefWidth="250" visible="false" />
+  	    <Label fx:id="lossMessage" layoutX="379" layoutY="97" mnemonicParsing="false" prefHeight="75" prefWidth="250" visible="false" />
+  	    <Label fx:id="tieMessage" layoutX="379" layoutY="97" mnemonicParsing="false" prefHeight="75" prefWidth="250" visible="false" />
+		<Label fx:id="balance" alignment="center" layoutX="5.0" layoutY="5.0" minHeight="25.0" minWidth="120" />
+	    <AnchorPane fx:id="betLayout" layoutX="5.0" layoutY="512.0" prefHeight="80.0" prefWidth="165.0">
+         <children>
+      	        <Spinner fx:id="bet" amountToStepBy="100" layoutX="5.0" layoutY="35.0" max="1000" min="0" prefHeight="35.0" prefWidth="80.0">
+		    </Spinner>
+      		    <Label fx:id="betLabel" alignment="center" layoutX="9.0" layoutY="7.0" prefHeight="25.0" prefWidth="60" text="Bet" />
+            <Group layoutX="93.0" layoutY="6.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="Player">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton layoutY="25.0" mnemonicParsing="false" text="Banker" toggleGroup="$toggleGroup" />
+                  <RadioButton layoutY="50.0" mnemonicParsing="false" text="Tie" toggleGroup="$toggleGroup" />
+               </children>
+            </Group>
+         </children>
+        </AnchorPane>
+        <Label fx:id="numWins" layoutX="981.0" layoutY="22.0" prefHeight="17.0" prefWidth="22.0" textFill="#fffefe" />
+		<Label fx:id="numLoses" layoutX="981.0" layoutY="36.0" prefHeight="17.0" prefWidth="22.0" textFill="WHITE" />
+      <VBox layoutX="867.0" layoutY="19.0">
+         <children>
+      		<Label text="Number of Wins:" textFill="WHITE" />
+      		<Label text="Number of Loses:" textFill="WHITE" />
+      		<Label text="Games Played:" textFill="WHITE" />
+         </children>
+      </VBox>
+		<Label fx:id="numGames" layoutX="970.0" layoutY="51.0" prefHeight="17.0" prefWidth="9.0" textFill="WHITE" />
+   </children>
+   <stylesheets>
+    <URL value="@gameScreen.css" />
+  </stylesheets>
+</AnchorPane>

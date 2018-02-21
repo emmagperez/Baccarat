@@ -1,0 +1,6 @@
+user: egp       highscore: 0,
+user: huj       highscore: 0,
+user: kuh       highscore: 0,
+user: qel       highscore: 4,
+user: num       highscore: 2,
+user: ast       highscore: 6,
